@@ -1,42 +1,81 @@
 {
-    "indent": 2,
-    "dateFormat": "%Y-%m-%d",
-    "depth": 0,
-    "Nodes": {
-        "ProjectStart": "$indent<outline text=\"$name\" completed=\"$date_completed\" _note=\"$note\">", 
-        "FolderStart": "$indent<outline text=\"$name\">", 
-        "TaskStart": "$indent<outline text=\"$name\" completed=\"$date_completed\" _note=\"$note\">", 
-        "TaskGroupStart": "$indent<outline text=\"$name\" completed=\"$date_completed\" _note=\"$note\">", 
-        "ContextStart": "$indent<outline text=\"$name\">",
-        "ProjectEnd": "$indent</outline>", 
+    "#01": "opml", 
+    "#02": "A template for opml files that can be read by OmniOutliner and several mindmap tools", 
+    "attributes": {
+        "context": {
+            "default": "", 
+            "eval": "value.name", 
+            "format": "$value", 
+            "type": "opml.string"
+        }, 
+        "date_completed": {
+            "default": "", 
+            "format": "$value", 
+            "type": "date"
+        }, 
+        "date_due": {
+            "default": "", 
+            "format": "$value", 
+            "type": "date"
+        }, 
+        "date_to_start": {
+            "default": "", 
+            "format": "$value", 
+            "type": "date"
+        }, 
+        "flagged": {
+            "default": "", 
+            "format": "$value", 
+            "type": "boolean"
+        }, 
+        "id": {
+            "default": "", 
+            "format": "$value", 
+            "type": "opml.string"
+        }, 
+        "link": {
+            "default": "", 
+            "format": "$value", 
+            "type": "opml.string"
+        }, 
+        "name": {
+            "default": "", 
+            "format": "$value", 
+            "type": "opml.string"
+        }, 
+        "note": {
+            "default": "", 
+            "format": "$value", 
+            "type": "opml.note"
+        }, 
+        "project": {
+            "default": "", 
+            "eval": "value.name", 
+            "format": "$value", 
+            "type": "opml.string"
+        }, 
+        "type": {
+            "default": "", 
+            "format": "$value", 
+            "type": "opml.string"
+        }
+    }, 
+    "dateFormat": "%Y-%m-%d", 
+    "depth": 0, 
+    "indent": 2, 
+    "indentString": "  ", 
+    "nodes": {
+        "ContextEnd": "$indent</outline>", 
+        "ContextStart": "$indent<outline text=\"$name\">", 
         "FolderEnd": "$indent</outline>", 
+        "FolderStart": "$indent<outline text=\"$name\">", 
+        "ProjectEnd": "$indent</outline>", 
+        "ProjectStart": "$indent<outline text=\"$name\" completed=\"$date_completed\" _note=\"$note\">", 
         "TaskEnd": "$indent</outline>", 
         "TaskGroupEnd": "$indent</outline>", 
-        "ContextEnd": "$indent</outline>"
+        "TaskGroupStart": "$indent<outline text=\"$name\" completed=\"$date_completed\" _note=\"$note\">", 
+        "TaskStart": "$indent<outline text=\"$name\" completed=\"$date_completed\" _note=\"$note\">"
     }, 
-    "NodeAttributeDefaults": {
-        "date_to_start": "", 
-        "date_due": "", 
-        "date_completed": "",
-        "link" : "", 
-        "name": "", 
-        "project": "", 
-        "context": "", 
-        "flagged": "",
-        "note": ""
-    }, 
-    "indentString": "  ", 
-    "NodeAttributes": {
-        "date_to_start": "$value", 
-        "date_due": "$value", 
-        "date_completed": "$value", 
-        "name": "$value", 
-        "link": "$value", 
-        "project": "$value", 
-        "context": "$value", 
-        "flagged": "$value",
-        "note" : "$value"
-    },
-    "preamble": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<opml version=\"1.0\">\n  <head>\n    <title>OmniFocus</title>\n  </head>\n  <body>",
-    "postamble": "  </body>\n</opml>"
+    "postamble": "  </body>\n</opml>", 
+    "preamble": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<opml version=\"1.0\">\n  <head>\n    <title>OmniFocus</title>\n  </head>\n  <body>"
 }

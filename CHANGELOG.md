@@ -1,5 +1,30 @@
 # Changes #
 
+## 3.0.3 (2013-06-07)
+
+- Fixed but that caused exported allday calendar items to appear a day late.
+
+## 3.0.2 (2013-06-03)
+
+- Fixed bug with TaskPaper template, removed project tag from project (always itself!).
+- Fixed bug that caused tasks not have a project attribute.
+- Added support for Inbox items (ofexport considers Inbox items to be in a project called "Inbox").
+
+## 3.0.1 (2013-05-30)
+
+- Made default format when printing to stdout configurable.
+- Reformatted json config using "recommended" layout (bleh!) with a BBEdit plugin http://bbeditextras.org/wiki/index.php?title=Text_Filters
+- Moved db search path into config.
+- Added config for default "%of cal" directives.
+- Fixed a bug where I wasn't using the persistentIdentifier as the task id.
+
+## 3.0.0 (2013-05-27)
+
+- Introduced a plugin model.
+- Changed format of templates to support plugins better.
+- Added a global config file: ofexport.json for plugins and file associations.
+- Add **id** and **type** attributes to a few templates.
+
 ## 2.1.6 (2013-05-20)
 
 - Tweaks to date sorting so that items with no dates appear below those that do.

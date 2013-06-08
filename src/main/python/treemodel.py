@@ -19,11 +19,8 @@ from typeof import TypeOf
 from util import strip_tabs_newlines
 import uuid
 import logging
-import sys
 
-logging.basicConfig(format='%(asctime)-15s %(name)s %(levelname)s %(message)s', stream=sys.stdout)
 logger = logging.getLogger(__name__)
-logger.setLevel(level=logging.ERROR)
 
 TASK = 'Task'
 PROJECT = 'Project'
@@ -40,8 +37,12 @@ class NodeFwdDecl (object):
     # How to do forward class declarations in python?
     pass
 
+class ProjectFwdDecl (object):
+    # How to do forward class declarations in python?
+    pass
+
 class Node (NodeFwdDecl):
-    id = TypeOf ('id', str)
+    id = TypeOf ('id', unicode)
     name = TypeOf ('name', unicode)
     parent = TypeOf ('parent', NodeFwdDecl)
     marked = TypeOf ('marked', bool)
@@ -66,7 +67,7 @@ class Node (NodeFwdDecl):
         self.attribs = dict(attribs)
         self.type = nType
         self.link = link
-        self.id = str(uuid.uuid1())
+        self.id = unicode(uuid.uuid1())
         self.order = order
         if parent != None:
             parent.add_child (self)
@@ -75,6 +76,10 @@ class Node (NodeFwdDecl):
         child.parent = self
     def __str__ (self):
         return self.name
+    def recursive_set_project (self, task, project):
+        task.project = project
+        for child in task.children:
+            self.recursive_set_project(child, project)
 
 class Context(Node):
     status = TypeOf ('status', unicode)
@@ -107,6 +112,7 @@ class Context(Node):
 class Task(Node):
     flagged = TypeOf ('flagged', bool)
     next = TypeOf ('next', bool)
+    project = TypeOf ('project', Node) # :-(
     context = TypeOf ('context', Context)
     date_completed = TypeOf ('date_completed', datetime)
     date_to_start = TypeOf ('date_to_start', datetime)
@@ -143,8 +149,12 @@ class Task(Node):
         self.date_to_start = date_to_start
         self.date_due = date_due
         self.note=note
+    def add_child (self, child):
+        self.children.append(child)
+        child.parent = self
+        self.recursive_set_project (child, self.project)
 
-class Folder(Node):
+class Folder(Node, ProjectFwdDecl):
     def __init__ (self,
                   name=None,
                   parent=None,
@@ -161,6 +171,7 @@ class Folder(Node):
                        link=link,
                        order=order,
                        attribs=attribs)
+
 class Project(Node):
     flagged = TypeOf ('flagged', bool)
     context = TypeOf ('context', Context)
@@ -199,7 +210,11 @@ class Project(Node):
         self.date_due = date_due
         self.note = note
         self.status = unicode(status)
-    
+    def add_child (self, child):
+        self.children.append(child)
+        child.parent = self
+        self.recursive_set_project (child, self)
+
 class Visitor(object):
     project_mode = TypeOf ('flagged', bool)
     def __init__(self):

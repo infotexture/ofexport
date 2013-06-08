@@ -18,13 +18,10 @@ import re
 from treemodel import TASK, PROJECT, CONTEXT, FOLDER, Note
 from datetime import datetime
 from datematch import process_date_specifier, match_date_against_range, date_range_to_str
-import sys
 from visitors import Filter, Prune, Sort, Flatten
 import logging
 
-logging.basicConfig(format='%(asctime)-15s %(name)s %(levelname)s %(message)s', stream=sys.stdout)
 LOGGER = logging.getLogger(__name__)
-LOGGER.setLevel(level=logging.ERROR)
 
 the_time = None
 NOW = datetime.now()
