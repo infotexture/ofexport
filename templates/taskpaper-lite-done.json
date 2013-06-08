@@ -1,6 +1,8 @@
 {
     "#01": "taskpaper-lite", 
-    "#02": "Based on the taskpaper template but with less tags in the output and uses @yyyy-mm-dd instead of @done(yyyy-mm-dd)", 
+    "#02": "Based on the taskpaper template but with less tags in the output",
+    "#03": "The default `taskpaper-lite` template uses @yyyy-mm-dd instead of @done(yyyy-mm-dd) and a modified `dateFormat`: %Y-%m-%d-%a",
+    "#04": "This customized variant uses the same date format and completion tag syntax as the main `taskpaper` template for consistency",
     "attributes": {
         "context": {
             "default": "", 
@@ -10,7 +12,7 @@
         }, 
         "date_completed": {
             "default": "", 
-            "format": " @$value", 
+            "format": " @done($value)", 
             "type": "date"
         }, 
         "date_due": {
@@ -61,7 +63,7 @@
             "type": "taskpaper.tag"
         }
     }, 
-    "dateFormat": "%Y-%m-%d-%a", 
+    "dateFormat": "%Y-%m-%d", 
     "depth": 0, 
     "indent": 0, 
     "indentString": "\t", 
