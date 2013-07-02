@@ -40,8 +40,7 @@ The examples below can be run from a script such as `./ofexport-all.sh`
 
     ofexport -T markdown-lite -f=VPI -o ~/Desktop/VPI-report_last-week.md -a flatten -a prune -a "done='last week'"
 
-## Remaining TMM tasks – replaces former `TMM.todo` (candidate for auto-export)
-
+## AUTOEXPORT: Remaining TMM tasks – replaces former `TMM.todo` 
 (Removes @context & @project info, but keeps notes)
 
     ofexport -T taskpaper-lite-notes -p=TMM -o ~/Desktop/TMM_notes.todo -a prune -E -a done=any

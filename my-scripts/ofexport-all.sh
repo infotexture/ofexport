@@ -15,5 +15,8 @@ ofexport -o ~/Documents/Dropbox/Notes/OmniFocus-truth.todo
 # Export just the remaining projects and tasks (pruned, EXCLUDING done)
 ofexport -T taskpaper-lite-done -o ~/Documents/Dropbox/Notes/OmniFocus-tasks.todo -a prune -E -a done=any
 
+# Remaining TMM tasks
+ofexport -T taskpaper-lite-notes -p=TMM -o ~/Documents/Dropbox/Notes/TMM.todo -a prune -E -a done=any
+
 # Exit with status of last command.
 exit $?
