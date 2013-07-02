@@ -12,8 +12,8 @@ export PATH=$PATH:"$OFEXPORT_HOME/bin"
 # Export the full content with all notes, tags, contexts, backlink URLs, etc.
 ofexport -o ~/Documents/Dropbox/Notes/OmniFocus-truth.todo
 
-# Export a simpler, less cluttered version with just the projects and tasks
-ofexport -T taskpaper-lite-done -o ~/Documents/Dropbox/Notes/OmniFocus-tasks.todo
+# Export just the remaining projects and tasks (pruned, EXCLUDING done)
+ofexport -T taskpaper-lite-done -o ~/Documents/Dropbox/Notes/OmniFocus-tasks.todo -a prune -E -a done=any
 
 # Exit with status of last command.
 exit $?

@@ -3,7 +3,7 @@
 The examples below can be run from a script such as `./ofexport-all.sh`
 (see also `../documentation/examples.md`)
 
-# Export just the remaining projects and tasks (pruned, EXCLUDING done)
+# AUTOEXPORT: Just the remaining projects and tasks (pruned, EXCLUDING done)
 
     ofexport -T taskpaper-lite-done -o ~/Desktop/OmniFocus-tasks_remaining.todo -a prune -E -a done=any
 
