@@ -18,5 +18,8 @@ ofexport -T taskpaper-lite-done -o ~/Documents/Dropbox/Notes/OmniFocus-tasks.tod
 # Remaining TMM tasks
 ofexport -T taskpaper-lite-notes -p=TMM -o ~/Documents/Dropbox/Notes/TMM.todo -a prune -E -a done=any
 
+# Remaining Adyton tasks
+ofexport -T taskpaper-lite-notes -p=Adyton -o ~/Documents/Dropbox/Notes/Adyton.todo -a prune -E -a done=any
+
 # Exit with status of last command.
 exit $?
