@@ -1,0 +1,80 @@
+{
+    "#01": "Markdown lite", 
+    "#02": "A template for markdown files (based on the original, but without done dates or notes)", 
+    "attributes": {
+        "context": {
+            "default": "", 
+            "eval": "value.name", 
+            "format": " project:**$value**", 
+            "type": "string"
+        }, 
+        "date_completed": {
+            "default": "", 
+            "format": "", 
+            "type": "date"
+        }, 
+        "date_due": {
+            "default": "", 
+            "format": " due:**$value**", 
+            "type": "date"
+        }, 
+        "date_to_start": {
+            "default": "", 
+            "format": " start:**$value**", 
+            "type": "date"
+        }, 
+        "flagged": {
+            "default": "", 
+            "eval": "True if value else None", 
+            "format": " flagged", 
+            "type": "boolean"
+        }, 
+        "hashes": {
+            "default": "", 
+            "format": "$value", 
+            "type": "string"
+        }, 
+        "id": {
+            "default": "", 
+            "format": " $value", 
+            "type": "string"
+        }, 
+        "link": {
+            "default": "", 
+            "format": "$value", 
+            "type": "string"
+        }, 
+        "name": {
+            "default": "", 
+            "format": "$value", 
+            "type": "string"
+        }, 
+        "note": {
+            "default": "", 
+            "format": "$value", 
+            "type": "note"
+        }, 
+        "project": {
+            "default": "", 
+            "eval": "value.name", 
+            "format": " context:**$value**", 
+            "type": "string"
+        }, 
+        "type": {
+            "default": "", 
+            "format": " $value", 
+            "type": "string"
+        }
+    }, 
+    "dateFormat": "%Y-%m-%d", 
+    "depth": 0, 
+    "indent": 0, 
+    "indentString": "    ", 
+    "nodes": {
+        "ContextStart": "$hashes$name", 
+        "FolderStart": "$hashes$name", 
+        "ProjectStart": "$hashes$name", 
+        "TaskGroupStart": "$indent- $name$date_completed", 
+        "TaskStart": "$indent- $name$date_completed"
+    }
+}
