@@ -1,5 +1,5 @@
 {
-    "#01": "taskpaper-lite", 
+    "#01": "taskpaper-lite-done", 
     "#02": "Based on the taskpaper template but with less tags in the output",
     "#03": "The default `taskpaper-lite` template uses @yyyy-mm-dd instead of @done(yyyy-mm-dd) and a modified `dateFormat`: %Y-%m-%d-%a",
     "#04": "This customized variant uses the same date format and completion tag syntax as the main `taskpaper` template for consistency",
