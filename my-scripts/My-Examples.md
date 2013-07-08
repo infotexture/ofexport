@@ -53,6 +53,13 @@ The examples below can be run from a script such as `./ofexport-all.sh`
     ofexport -T taskpaper-lite-notes -p=Adyton -o ~/Desktop/Adyton.todo -a prune -E -a done=any
 
 
+# mobile
+
+## AUTOEXPORT: Remaining mobile tasks – replaces former `mobile.todo` 
+
+    ofexport -T taskpaper-lite-notes -p=mobile -o ~/Desktop/mobile.todo -a prune -E -a done=any
+
+
 # Default Examples
 
 This produces the report of all uncompleted tasks that are flagged or due soon:
