@@ -24,5 +24,8 @@ ofexport -T taskpaper-lite-notes -p=Adyton -o ~/Documents/Dropbox/Notes/Adyton.t
 # Remaining eBay / mobile.international tasks
 ofexport -T taskpaper-lite-notes -p=eBay -o ~/Documents/Dropbox/Notes/eBay.todo -a prune -E -a done=any
 
+# Remaining ipoque tasks
+ofexport -T taskpaper-lite-notes -p=ipoque -o ~/Documents/Dropbox/Notes/ipoque.todo -a prune -E -a done=any
+
 # Exit with status of last command.
 exit $?

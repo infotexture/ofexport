@@ -60,6 +60,13 @@ The examples below can be run from a script such as `./ofexport-all.sh`
     ofexport -T taskpaper-lite-notes -p=eBay -o ~/Desktop/eBay.todo -a prune -E -a done=any
 
 
+# ipoque
+
+## AUTOEXPORT: Remaining ipoque tasks – replaces former `ipoque.todo` 
+
+    ofexport -T taskpaper-lite-notes -p=ipoque -o ~/Desktop/ipoque.todo -a prune -E -a done=any
+
+
 # Default Examples
 
 This produces the report of all uncompleted tasks that are flagged or due soon:
