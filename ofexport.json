@@ -1,5 +1,7 @@
 {
     "db_search_path": [
+        "/Library/Containers/com.omnigroup.OmniFocus2/Data/Library/Caches/com.omnigroup.OmniFocus2/OmniFocusDatabase2",
+        "/Users/rofish/Library/Containers/com.omnigroup.OmniFocus2/Data/Library/Caches/com.omnigroup.OmniFocus2/OmniFocusDatabase2",
         "/Library/Caches/com.omnigroup.OmniFocus/OmniFocusDatabase2", 
         "/Library/Caches/com.omnigroup.OmniFocus.MacAppStore/OmniFocusDatabase2", 
         "/Library/Containers/com.omnigroup.OmniFocus2/Data/Library/Caches/com.omnigroup.OmniFocus2/OmniFocusDatabase2"
