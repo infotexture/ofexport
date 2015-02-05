@@ -18,17 +18,17 @@ ofexport -T taskpaper-lite-done -o ~/Documents/Dropbox/Notes/OmniFocus-tasks.tod
 # Remaining TMM tasks
 ofexport -T taskpaper-lite-notes -p=TMM -o ~/Documents/Dropbox/Notes/TMM.todo -a prune -E -a done=any
 
-# Remaining Adyton tasks
-ofexport -T taskpaper-lite-notes -p=Adyton -o ~/Documents/Dropbox/Notes/Adyton.todo -a prune -E -a done=any
+# Remaining Adyton/Gateprotect tasks
+ofexport -T taskpaper-lite-notes -p=Gateprotect -o ~/Documents/Dropbox/Notes/Gateprotect.todo -a prune -E -a done=any
 
 # Remaining eBay / mobile.international tasks
 ofexport -T taskpaper-lite-notes -p=eBay -o ~/Documents/Dropbox/Notes/eBay.todo -a prune -E -a done=any
 
 # Remaining ipoque tasks
-ofexport -T taskpaper-lite-notes -p=ipoque -o ~/Documents/Dropbox/Notes/ipoque.todo -a prune -E -a done=any
+# ofexport -T taskpaper-lite-notes -p=ipoque -o ~/Documents/Dropbox/Notes/ipoque.todo -a prune -E -a done=any
 
 # Remaining OD-OS tasks
-ofexport -T taskpaper-lite-notes -p=OD-OS -o ~/Documents/Dropbox/Notes/OD-OS.todo -a prune -E -a done=any
+# ofexport -T taskpaper-lite-notes -p=OD-OS -o ~/Documents/Dropbox/Notes/OD-OS.todo -a prune -E -a done=any
 
 # Exit with status of last command.
 exit $?
