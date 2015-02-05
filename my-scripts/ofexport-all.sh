@@ -30,5 +30,8 @@ ofexport -T taskpaper-lite-notes -p=eBay -o ~/Documents/Dropbox/Notes/eBay.todo 
 # Remaining OD-OS tasks
 # ofexport -T taskpaper-lite-notes -p=OD-OS -o ~/Documents/Dropbox/Notes/OD-OS.todo -a prune -E -a done=any
 
+# Remaining Zeta/Wire tasks
+ofexport -T taskpaper-lite-notes -p=Wire -o ~/Documents/Dropbox/Notes/Wire.todo -a prune -E -a done=any
+
 # Exit with status of last command.
 exit $?
