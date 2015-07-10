@@ -16,7 +16,7 @@ ofexport -o ~/Documents/Dropbox/Notes/OmniFocus-truth.todo
 ofexport -T taskpaper-lite-done -o ~/Documents/Dropbox/Notes/OmniFocus-tasks.todo -a prune -E -a done=any
 
 # Remaining TMM tasks
-ofexport -T taskpaper-lite-notes -p=TMM -o ~/Documents/Dropbox/Notes/TMM.todo -a prune -E -a done=any
+# ofexport -T taskpaper-lite-notes -p=TMM -o ~/Documents/Dropbox/Notes/TMM.todo -a prune -E -a done=any
 
 # Remaining Adyton/Gateprotect tasks
 ofexport -T taskpaper-lite-notes -p=Gateprotect -o ~/Documents/Dropbox/Notes/Gateprotect.todo -a prune -E -a done=any
@@ -29,6 +29,9 @@ ofexport -T taskpaper-lite-notes -p=eBay -o ~/Documents/Dropbox/Notes/eBay.todo 
 
 # Remaining OD-OS tasks
 # ofexport -T taskpaper-lite-notes -p=OD-OS -o ~/Documents/Dropbox/Notes/OD-OS.todo -a prune -E -a done=any
+
+# Remaining Rhebo tasks
+ofexport -T taskpaper-lite-notes -p=Rhebo -o ~/Documents/Dropbox/Notes/Rhebo.todo -a prune -E -a done=any
 
 # Remaining Zeta/Wire tasks
 ofexport -T taskpaper-lite-notes -p=Wire -o ~/Documents/Dropbox/Notes/Wire.todo -a prune -E -a done=any
