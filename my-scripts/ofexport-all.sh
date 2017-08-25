@@ -19,7 +19,7 @@ ofexport -T taskpaper-lite-done -o ~/Documents/Dropbox/Notes/OmniFocus-tasks.tod
 # ofexport -T taskpaper-lite-notes -p=TMM -o ~/Documents/Dropbox/Notes/TMM.todo -a prune -E -a done=any
 
 # Remaining Adyton/Gateprotect tasks
-ofexport -T taskpaper-lite-notes -p=Gateprotect -o ~/Documents/Dropbox/Notes/Gateprotect.todo -a prune -E -a done=any
+# ofexport -T taskpaper-lite-notes -p=Gateprotect -o ~/Documents/Dropbox/Notes/Gateprotect.todo -a prune -E -a done=any
 
 # Remaining eBay / mobile.international tasks
 ofexport -T taskpaper-lite-notes -p=eBay -o ~/Documents/Dropbox/Notes/eBay.todo -a prune -E -a done=any
