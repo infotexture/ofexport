@@ -6,7 +6,7 @@
 
 # 2013-05-17: Explicitly add OmniFocus `ofexport` tool to PATH
 # See <https://github.com/psidnell/ofexport/blob/master/DOCUMENTATION.md>
-export OFEXPORT_HOME="/Users/rofish/Documents/Setup/Scripts/OmniFocus/ofexport"
+export OFEXPORT_HOME="/Users/rsheen/Documents/Setup/Scripts/OmniFocus/ofexport"
 export PATH=$PATH:"$OFEXPORT_HOME/bin"
 
 # Export the full content with all notes, tags, contexts, backlink URLs, etc.
